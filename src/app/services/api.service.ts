@@ -6,7 +6,7 @@ import { tap, throwError } from 'rxjs';
   providedIn: 'root'
 })
 export class ApiService {
-  public accessToken='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';
+  public accessToken='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';
 
   constructor(
     private httpClient: HttpClient
