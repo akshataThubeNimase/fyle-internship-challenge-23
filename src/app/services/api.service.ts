@@ -6,19 +6,17 @@ import { tap, throwError } from 'rxjs';
   providedIn: 'root'
 })
 export class ApiService {
-  public accessToken='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'
+  public accessToken='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';
 
   constructor(
     private httpClient: HttpClient
   ) { }
 
   getUser(githubUsername: string) {
-    //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
     return this.httpClient.get(`https://api.github.com/users/${githubUsername}`,{
       headers:{'Authorization': 'Bearer ' + this.accessToken}
     });
   }
- // ?page=1&per_page=5
   getRepos(repoUrl:string, p:number, itemsPerPage:number){
     return this.httpClient.get(repoUrl + `?page=${p}&per_page=${itemsPerPage}`,{
       headers:{'Authorization': 'Bearer ' + this.accessToken}
