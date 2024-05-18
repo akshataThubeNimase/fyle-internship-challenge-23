@@ -6,7 +6,7 @@ import { tap, throwError } from 'rxjs';
   providedIn: 'root'
 })
 export class ApiService {
-  public accessToken='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';
+  public accessToken='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';
 
   constructor(
     private httpClient: HttpClient
@@ -29,8 +29,4 @@ export class ApiService {
     });
   }
 
-  
-
-
-  // implement getRepos method by referring to the documentation. Add proper types for the return type and params 
 }
